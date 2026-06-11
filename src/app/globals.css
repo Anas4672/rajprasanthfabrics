@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Playfair+Display:wght@400..900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-primary: #6B21A8;
+  --color-primary-light: #9333EA;
+  --color-secondary: #E9D5FF;
+  --color-accent: #C084FC;
+  --color-background: #ffffff;
+  --color-foreground: #171717;
+
+  /* Fonts */
+  --font-sans: "Inter", sans-serif;
+  --font-serif: "Playfair Display", serif;
+}
+
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: #171717;
+  }
+
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+}
+
+/* Custom utility classes */
+@utility glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(107, 33, 168, 0.05);
+}
+
+@utility glass-dark {
+  background: rgba(107, 33, 168, 0.05);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(107, 33, 168, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(107, 33, 168, 0.05);
+}
+
+@utility text-gradient {
+  background: linear-gradient(to right, #6B21A8, #C084FC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
